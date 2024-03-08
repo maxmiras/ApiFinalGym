@@ -5,6 +5,11 @@ const cors=require('cors');
 
 let app = express()
 db.obtenerDB('./Gym.db')
+// Permitir acceso a todos los orígenes
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 
 
