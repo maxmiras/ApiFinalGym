@@ -1,5 +1,11 @@
 {
     "version": 2,
+    "builds" : [
+      {
+        "src"   : "./index.html",
+        "use"   : "@vercel/node"
+      }
+    ],
     "routes": [
       {
         "src": "/(.*)",
@@ -10,6 +16,7 @@
           "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
         },
         "dest": "/index.js"
+
       }
     ]
   }
